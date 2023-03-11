@@ -1,0 +1,11 @@
+ORG         $00005000
+MOVE        #60, $00005000
+TRAP        #1
+LOOP1       MOVE       DO, $00005004
+MOVE        $00005000, DO
+ADD         $00005004, DO
+MOVE        DO, $00005002
+LOOP2       ADDI       #15, $00005002
+TRAP        #2
+TRAP        #0
+END

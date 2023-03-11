@@ -1,0 +1,15 @@
+Symbol Table:
+Loop1 00005004
+Loop2 00005002
+
+
+Address       Machine Code   Operands          Instructions
+00005000      33FC           003C00005000      ORG         $00005000
+00005008      4E41                             MOVE        #60, $00005000
+0000500A      33C0           00005004          TRAP        #1
+00005010      3039           00005000          LOOP1       MOVE       DO, $00005004
+00005016      D079           00005004          MOVE        $00005000, DO
+0000501C      33C0           00005002          ADD         $00005004, DO
+00005022      0679           000F00005002      MOVE        DO, $00005002
+0000502A      4E42                             LOOP2       ADDI       #15, $00005002
+0000502C      4E40                             TRAP        #2
